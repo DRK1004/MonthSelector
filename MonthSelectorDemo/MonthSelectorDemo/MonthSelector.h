@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-// Delegate for month picker
-@protocol MonthPickerDelegate <NSObject>
+// Delegate for month Selector
+@protocol MonthSelectorDelegate <NSObject>
 -(void) didSelectMonth:(NSInteger)month inYear:(NSInteger)year;
 @end
 
