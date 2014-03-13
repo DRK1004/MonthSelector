@@ -14,7 +14,7 @@ Create a single view based project. Add Quartzcore framework to your project. Si
 
 
 ###How to use:
-Now in your ViewController.h file, add the MonthSelector Delegate like:
+Now in your ViewController.h file, add the `MonthSelectorDelegate` like:
 
 `@interface ViewController : UIViewController<MonthSelectorDelegate>` 
 
@@ -30,7 +30,7 @@ Now add following lines:
 `[self.view addSubview:monthSelector];`
 
 
-Now define the method for MonthSelectorDelegate 
+Now define the method for `MonthSelectorDelegate` 
 
 `-(void)didSelectMonth:(NSInteger)month inYear:(NSInteger)year`
 
