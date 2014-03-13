@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="MonthSelector : Selects month and year only without day" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MonthSelector</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/DRK1004/MonthSelector">View on GitHub</a>
+
+          <h1 id="project_title">MonthSelector</h1>
+          <h2 id="project_tagline">Selects month and year only without day</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/DRK1004/MonthSelector/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/DRK1004/MonthSelector/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="monthselector" class="anchor" href="#monthselector"><span class="octicon octicon-link"></span></a>MonthSelector</h1>
+
+<p>This component lets you to select month and year without days. It can be treated as month and year picker.</p>
+
+<p><img src="Screenshots/Screen%20Shot%201.png" alt="Screenshot"></p>
+
+<h3>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h3>
+
+<p>This component is compatible with ARC and iOS 6+.</p>
+
+<h3>
+<a name="how-to-include-in-your-project" class="anchor" href="#how-to-include-in-your-project"><span class="octicon octicon-link"></span></a>How to include in your project:</h3>
+
+<p>Create a single view based project. Add Quartzcore framework to your project. Simply add the <code>MonthSelector.h</code> and <code>MonthSelector.m</code> files in your project. </p>
+
+<h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use:</h3>
+
+<p>Now in your ViewController.h file, add the <code>MonthSelectorDelegate</code> like:</p>
+
+<p><code>@interface ViewController : UIViewController&lt;MonthSelectorDelegate&gt;</code> </p>
+
+<p>In ViewController.m file, create a object for MonthSelector. In <code>viewDidLoad</code> initialise the MonthSelector Object like:</p>
+
+<p><code>monthSelector = [[MonthSelector alloc] initWithVerticalPosition:100];</code></p>
+
+<p>where vertical position is the position where you want to place this component. </p>
+
+<p>Now add following lines:</p>
+
+<p><code>monthSelector.delegate = self;</code>
+<code>[self.view addSubview:monthSelector];</code></p>
+
+<p>Now define the method for <code>MonthSelectorDelegate</code> </p>
+
+<p><code>-(void)didSelectMonth:(NSInteger)month inYear:(NSInteger)year</code></p>
+
+<p>where you would receive the month and year as integer.</p>
+
+<p>I have provided a method(<code>getMonthString:</code>) to get the month name in MMM format from integer, which can be used as :</p>
+
+<p><code>NSString *monthName = [monthSelector getMonthString:month];</code></p>
+
+<p>Now run the program. It will show the MonthSelector component on view.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>This component can be used for both ipad and iphone. On iPhone it looks as :</p>
+
+<p><img src="Screenshots/Screen%20Shot%203.png" alt="Screenshot"></p>
+
+<p>There are some common properties which can be changed to customise the component. eg You can change the theme and font sizes as in </p>
+
+<p><code>monthSelector.monthFontsize =  [NSNumber numberWithInt:12];</code></p>
+
+<p><code>monthSelector.yearFontsize = [NSNumber numberWithInt:14];</code></p>
+
+<p><code>monthSelector.monthFontColor = [UIColor blackColor];</code></p>
+
+<p><code>monthSelector.yearFontColor = [UIColor whiteColor];</code></p>
+
+<p><code>monthSelector.highlightFontColor = [UIColor greenColor];</code></p>
+
+<p><code>monthSelector.themeColor = [UIColor brownColor];</code></p>
+
+<p><img src="Screenshots/Screen%20Shot%202.png" alt="Screenshot"></p>
+
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>Usage of this component is provided under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.  See the <code>LICENSE</code> file for more info.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MonthSelector maintained by <a href="https://github.com/DRK1004">DRK1004</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
