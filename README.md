@@ -2,6 +2,7 @@ MonthSelector
 =============
 
 This component lets you to select month and year without days. It can be treated as month and year picker.
+![Screenshot](Screenshots/Screen Shot 1.png)
 
 ###How to include in your project:
 Create a single view based project. Add Quartzcore framework to your project. Simply add the `MonthSelector.h` and `MonthSelector.m` files in your project. 
