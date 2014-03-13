@@ -48,7 +48,7 @@
     monthSelector.themeColor = [UIColor brownColor];
 }
 
-// Delegate method for month picker
+// Delegate method for month selector
 -(void)didSelectMonth:(NSInteger)month inYear:(NSInteger)year
 {
     NSString *monthName = [monthSelector getMonthString:month];
@@ -56,3 +56,4 @@
     self.lblMessage.text = [NSString stringWithFormat:@"Selected month:%@ year:%d", monthName,year ];
 }
 @end
+

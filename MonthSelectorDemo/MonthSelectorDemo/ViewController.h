@@ -10,7 +10,7 @@
 #import "MonthSelector.h"
 
 
-@interface ViewController : UIViewController<MonthPickerDelegate>
+@interface ViewController : UIViewController<MonthSelectorDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
 - (IBAction)ChangeTheme:(id)sender;
 
